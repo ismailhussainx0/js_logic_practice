@@ -1,4 +1,4 @@
-git const books = [
+const books = [
     { id: 1, title: "JavaScript Basics", author: "Ali", available: true },
     { id: 2, title: "Clean Code", author: "Ahmed", available: true },
     { id: 3, title: "HTML & CSS", author: "Sara", available: false },
@@ -18,9 +18,9 @@ const findBook = (books, bookId) => {
 
     })
 
-    if(findedBook){
+    if (findedBook) {
         return findedBook;
-    }else{
+    } else {
         return "Book Not Found";
     }
 
@@ -28,17 +28,30 @@ const findBook = (books, bookId) => {
 }
 
 const searchBook = findBook(books, 2);
-// console.log(searchBook);
 
 
 
 // borrow book function
 const borrowBook = (books, id) => {
-    
-    let bookChecks = findBook(books, id);
-    if(bookChecks != "Book Not found"){
-        console.log("book exists");
-        
+
+    let bookAvalibleCheck = findBook(books, id);
+    if (bookAvalibleCheck !== "Book Not Found") {
+
+        if (bookAvalibleCheck.available) {
+            bookAvalibleCheck.available = false;
+            return "Book borrowed successfully";
+        } else {
+            return ("Book is already borrowed")
+        }
+
+
+    } else {
+        return "Book Not Found";
     }
 }
-borrowBook(books, 1);
+
+let isBookAvailable = borrowBook(books, 1)
+
+console.log(isBookAvailable);
+
+
