@@ -23,6 +23,7 @@ I am gradually increasing the difficulty of each challenge and practicing concep
 | Day 2 | Expense Tracker            | Arrays, Objects, `forEach()`, Functions, Conditions   |
 | Day 3 | Employee Salary Calculator | Objects, Functions, Loops, Conditions, Function Reuse |
 | Day 4 | ATM Machine Logic          | Objects, Arrays, Functions, Conditions, State Updates |
+| Day 5 | Library Management System | Arrays, Objects, Functions, `filter()`, Conditions, Scope |
 
 ## 📈 Progress
 
