@@ -28,6 +28,8 @@ const findBook = (books, bookId) => {
 }
 
 const searchBook = findBook(books, 2);
+// console.log(searchBook);
+
 
 
 
@@ -50,8 +52,59 @@ const borrowBook = (books, id) => {
     }
 }
 
-let isBookAvailable = borrowBook(books, 1)
+// let isBookAvailable = borrowBook(books, 1)
 
-console.log(isBookAvailable);
+// console.log(isBookAvailable);
 
 
+
+// Return Book Function
+const returnBook = (books, bookId) => {
+    
+    let bookAvalibleCheck = findBook(books, bookId);
+    if(bookAvalibleCheck !== "Book Not Found"){
+
+        if(bookAvalibleCheck.available === true){
+            return "Book Is Already Available";
+        }else{
+            bookAvalibleCheck.available = true;
+            return "Book Return successfully";
+        }
+
+    }else{
+        return "Book Not Found";
+    }
+
+
+}
+// const bookReturn = returnBook(books, 3);
+// console.log(bookReturn);
+
+
+
+// Available Book
+const getAvailableBook = (books) => {
+
+   let availableBooks = books.filter(function(book){
+        return book.available === true;
+
+   })
+  
+   return availableBooks;
+}
+const getBook = getAvailableBook(books)
+console.log(getBook);
+
+ 
+// UnAvailable Book
+const getUnavailableBook = (books) => {
+
+    let unAvailableBooks = books.filter(function(book){
+        return book.available === false;
+    })
+
+    return unAvailableBooks;
+}
+
+const getGivenBooks = getUnavailableBook(books);
+console.log(getGivenBooks);
