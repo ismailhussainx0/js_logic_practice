@@ -10,16 +10,16 @@ const students = [
 // find student
 const findStudent = (students, studentId) => {
     let idMatchStudent;
-    
+
     students.forEach(student => {
-        if(student.id === studentId){
+        if (student.id === studentId) {
             idMatchStudent = student;
         }
     });
 
-    if(idMatchStudent){
+    if (idMatchStudent) {
         return idMatchStudent;
-    }else{
+    } else {
         return "Student Not Found";
     }
 
@@ -27,3 +27,77 @@ const findStudent = (students, studentId) => {
 }
 
 console.log(findStudent(students, 3));
+
+
+// Students Grade Function
+const calculateGrade = (marks) => {
+    if (marks >= 90) {
+        return "A+";
+    } else if (marks >= 80) {
+        return "A";
+    } else if (marks >= 70) {
+        return "B";
+    } else if (marks >= 60) {
+        return "C";
+    } else if (marks >= 50) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+
+console.log(calculateGrade(students[3].marks));
+
+
+// Student Result function
+const getStudentResult = (student) => {
+
+    const studentGrade = calculateGrade(student.marks);
+
+    let status;
+    if (studentGrade !== "F" && student.attendance >= 75) {
+        status = "Pass";
+    } else {
+        status = "Fail";
+    }
+
+    let studentResult = {
+        Name: student.name,
+        Marks: student.marks,
+        Grade: studentGrade,
+        Attendance: student.attendance,
+        Status: status
+    }
+
+    return studentResult;
+
+}
+
+console.log(getStudentResult(students[3]));
+
+
+// Get only passed students 
+const getPassedStudents = (students) => {
+
+    const passStudents = students.filter(function(student){
+        return student.marks >= 50 && student.attendance >= 75;
+    })
+
+    return passStudents;
+} 
+
+console.log(getPassedStudents(students));
+
+
+// generate sudent Result
+const generateStudentReport = (students) => {
+    let studentReport = students.map(function(student){
+        let result = getStudentResult(student);
+        return result;
+    })
+
+    return studentReport;
+}
+
+console.log(generateStudentReport(students));
+
