@@ -25,6 +25,7 @@ I am gradually increasing the difficulty of each challenge and practicing concep
 | Day 4 | ATM Machine Logic          | Objects, Arrays, Functions, Conditions, State Updates |
 | Day 5 | Library Management System | Arrays, Objects, Functions, `filter()`, Conditions, Scope |
 | Day 6 | Student Result Management System | Arrays, Objects, Functions, `filter()`, `map()`, Conditions, Function Reuse |
+| Day 7 | Shopping Order Summary | Arrays, Objects, Functions, `filter()`, `map()`, `forEach()`, Conditions, Function Reuse |
 
 ## 📈 Progress
 
