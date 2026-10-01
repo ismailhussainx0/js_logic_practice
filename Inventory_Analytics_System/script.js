@@ -23,7 +23,7 @@ products.forEach(function(product){
 let totalStock = 0
 
 products.forEach(function(product){
-    totalProducts += product.stock;
+    totalStock += product.stock;
 })
 
 
@@ -43,8 +43,38 @@ let outOfStockProduct = products.filter(function(product){
 
 
 // category summary 
+const getCategorySummary = (products)  => {
+
+    let inventorySummary = {};
+    
+
+    products.forEach(function(product){
+        let productInventoryValue = product.stock * product.price;
+        productInventoryValue += inventorySummary[product.price]; 
+
+        if(inventorySummary[product.category]){
+            inventorySummary[product.category] += productInventoryValue;
+        }else{
+            inventorySummary[product.category] = productInventoryValue;
+        }
+        
+        
+
+    })
+
+    return inventorySummary;
+}
+
+return {
+    totalProducts: totalProducts,
+    totalStock: totalStock,
+    totalInventory: totalInventory,
+    outOfStockProduct: outOfStockProduct,
+    categorySummary: getCategorySummary
+}
 
 
 }
-inventoryRecord(products);
 
+inventoryDetails = inventoryRecord(products);
+console.log(inventoryDetails);
