@@ -1,11 +1,11 @@
 const menuItems = [
-    { name: "Burger", price: 500, quantity: 2 },
-    { name: "Pizza", price: 1200, quantity: 1 },
-    { name: "Fries", price: 250, quantity: 3 },
-    { name: "Drink", price: 150, quantity: 2 }
+    { name: "Burger", price: 500, quantity: 2, status: "completed" },
+    { name: "Pizza", price: 1200, quantity: 1, status: "completed" },
+    { name: "Fries", price: 250, quantity: 3, status: "cancelled" },
+    { name: "Drink", price: 150, quantity: 2, status: "completed" }
 ];
 
-//  TOTAL BILL USING REDUCE METHOD
+//  TOTAL BILL CALCULATE USING REDUCE METHOD
 const calculateTotalBill = (menuItems) => {
 
     const totalBill = menuItems.reduce(function (totalPrice, menuItem) {
@@ -26,13 +26,13 @@ const getItemSubtotals = (menuItems) => {
 
     let totalAmount = menuItems.map(function (item) {
 
-        const itemAmount = item.price * item.quantity;
+        const itemSubTotal = item.price * item.quantity;
 
-         return{
-                name: item.name,
-                price: itemAmount
-            }
-        
+        return {
+            name: item.name,
+            subtotal: itemSubTotal
+        }
+
 
     });
 
@@ -41,3 +41,44 @@ const getItemSubtotals = (menuItems) => {
 
 const subTotalOfitems = getItemSubtotals(menuItems);
 console.log(subTotalOfitems);
+
+
+// COMPLETED ORDER TOTAL AMOUNT
+const calculateCompletedOrder = (menuItems) => {
+
+    let completedItems = menuItems.filter(function (item) {
+        return item.status == "completed";
+    })
+
+    let completedOrderAmount = completedItems.reduce(function (totalAmount, item) {
+        let itemTotalPrice = item.quantity * item.price;
+        return totalAmount + itemTotalPrice;
+
+    }, 0)
+
+
+    return completedOrderAmount;
+}
+
+console.log(calculateCompletedOrder(menuItems));
+
+
+// EXPENCIVE ITEM
+const findMostExpensiveItem = (menuItems) => {
+
+    let expensiveItem = 0;
+
+    menuItems.forEach(function (item) {
+
+        let itemTotalBill = item.price * item.quantity;
+
+        if (itemTotalBill > expensiveItem) {
+            expensiveItem = item;
+        }
+
+    })
+
+    console.log(expensiveItem);
+}
+
+findMostExpensiveItem(menuItems)
