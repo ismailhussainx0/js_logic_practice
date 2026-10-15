@@ -1,7 +1,7 @@
 const menuItems = [
-    { name: "Burger", price: 500, quantity: 2, status: "completed" },
-    { name: "Pizza", price: 1200, quantity: 1, status: "completed" },
+    { name: "Burger", price: 500, quantity: 3, status: "completed" },
     { name: "Fries", price: 250, quantity: 3, status: "cancelled" },
+    { name: "Pizza", price: 1200, quantity: 1, status: "completed" },
     { name: "Drink", price: 150, quantity: 2, status: "completed" }
 ];
 
@@ -63,22 +63,26 @@ const calculateCompletedOrder = (menuItems) => {
 console.log(calculateCompletedOrder(menuItems));
 
 
+
 // EXPENCIVE ITEM
 const findMostExpensiveItem = (menuItems) => {
 
-    let expensiveItem = 0;
+    let highestPrice = 0;
+    let expensiveItem = null;
 
     menuItems.forEach(function (item) {
 
         let itemTotalBill = item.price * item.quantity;
 
-        if (itemTotalBill > expensiveItem) {
+        if (itemTotalBill > highestPrice) {
+            highestPrice = itemTotalBill;
             expensiveItem = item;
         }
 
     })
 
-    console.log(expensiveItem);
+    return expensiveItem;
 }
 
-findMostExpensiveItem(menuItems)
+const expensiveItem = findMostExpensiveItem(menuItems)
+console.log((expensiveItem));
