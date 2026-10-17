@@ -8,24 +8,26 @@ I am gradually increasing the difficulty of each challenge and practicing concep
 
 ## 🎯 Goals
 
-* Improve JavaScript problem-solving skills
-* Build stronger logical thinking
-* Practice JavaScript fundamentals consistently
-* Solve real-world programming problems
-* Become better at writing clean and understandable code
-* Improve gradually through daily practice
+- Improve JavaScript problem-solving skills
+- Build stronger logical thinking
+- Practice JavaScript fundamentals consistently
+- Solve real-world programming problems
+- Become better at writing clean and understandable code
+- Improve gradually through daily practice
 
 ## 📚 Challenges
 
-| Day   | Challenge                  | Main Concepts                                         |
-| ----- | -------------------------- | ----------------------------------------------------- |
-| Day 1 | Shopping Cart Calculator   | Arrays, Objects, Loops, Functions, Conditions         |
-| Day 2 | Expense Tracker            | Arrays, Objects, `forEach()`, Functions, Conditions   |
-| Day 3 | Employee Salary Calculator | Objects, Functions, Loops, Conditions, Function Reuse |
-| Day 4 | ATM Machine Logic          | Objects, Arrays, Functions, Conditions, State Updates |
-| Day 5 | Library Management System | Arrays, Objects, Functions, `filter()`, Conditions, Scope |
-| Day 6 | Student Result Management System | Arrays, Objects, Functions, `filter()`, `map()`, Conditions, Function Reuse |
-| Day 7 | Shopping Order Summary | Arrays, Objects, Functions, `filter()`, `map()`, `forEach()`, Conditions, Function Reuse |
+| Day   | Project Name                     | Concepts Practiced                                                                                                      |
+| ----- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Day 1 | Shopping Cart Calculator         | Arrays, Objects, Loops, Functions, Conditions                                                                           |
+| Day 2 | Expense Tracker                  | Arrays, Objects, `forEach()`, Functions, Conditions                                                                     |
+| Day 3 | Employee Salary Calculator       | Objects, Functions, Loops, Conditions, Function Reuse                                                                   |
+| Day 4 | ATM Machine Logic                | Objects, Arrays, Functions, Conditions, State Updates                                                                   |
+| Day 5 | Library Management System        | Arrays, Objects, Functions, `filter()`, Conditions, Scope                                                               |
+| Day 6 | Student Result Management System | Arrays, Objects, Functions, `filter()`, `map()`, Conditions, Function Reuse                                             |
+| Day 7 | Shopping Order Summary           | Arrays, Objects, Functions, `filter()`, `map()`, `forEach()`, Conditions, Function Reuse                                |
+| Day 8 | Restaurant Bill Analyzer         | Arrays, Objects, Functions, `reduce()`, `map()`, `filter()`, `forEach()`, Conditions, Return Values, Function Reuse     |
+| Day 9 | E-commerce Sales Analytics       | Arrays, Objects, Functions, `filter()`, `reduce()`, `map()`, `forEach()`, Conditions, Accumulator Logic, Function Reuse |
 
 ## 📈 Progress
 
@@ -35,17 +37,17 @@ Each new challenge is designed to be slightly harder than the previous one so th
 
 ## 🛠️ Technologies
 
-* JavaScript
-* Git
-* GitHub
+- JavaScript
+- Git
+- GitHub
 
 ## 📌 Challenge Rules
 
-* One JavaScript challenge every day
-* Each challenge takes approximately 30–60 minutes
-* Solutions are not copied; I solve the problems myself
-* Difficulty gradually increases
-* Code is reviewed after completing each challenge
+- One JavaScript challenge every day
+- Each challenge takes approximately 30–60 minutes
+- Solutions are not copied; I solve the problems myself
+- Difficulty gradually increases
+- Code is reviewed after completing each challenge
 
 ## 🚀 Future Challenges
 
